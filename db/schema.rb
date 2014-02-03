@@ -11,26 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203033328) do
+ActiveRecord::Schema.define(version: 20140203183044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "accounts", id: false, force: true do |t|
-    t.string   "id"
+  create_table "accounts", force: true do |t|
+    t.string   "public_hash"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "accounts", ["id"], name: "index_accounts_on_id", unique: true, using: :btree
-
-  create_table "photos", id: false, force: true do |t|
-    t.string   "id"
-    t.string   "account_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "photos", ["id"], name: "index_photos_on_id", unique: true, using: :btree
+  add_index "accounts", ["public_hash"], name: "index_accounts_on_public_hash", unique: true, using: :btree
 
 end

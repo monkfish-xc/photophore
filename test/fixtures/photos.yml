@@ -1,8 +1,9 @@
 # == Schema Information
 #
-# Table name: accounts
+# Table name: photos
 #
 #  id          :integer          not null, primary key
+#  account_id  :integer
 #  public_hash :string(255)
 #  created_at  :datetime
 #  updated_at  :datetime

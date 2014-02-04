@@ -11,6 +11,8 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'friendly_id'
 
+gem 'angularjs-rails'
+
 group :development do
   gem 'annotate'
   gem 'better_errors'

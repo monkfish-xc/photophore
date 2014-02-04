@@ -1,0 +1,9 @@
+<h1>Photophore</h1>
+
+<div class="form">
+<%= form_for @photo, :html => { :multipart => true } do |f| %>
+  <%= f.hidden_field :id %>
+  <%= f.file_field :image %>
+  <%= f.submit 'Upload image' %>
+<% end %>
+</div>

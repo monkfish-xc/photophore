@@ -1,1 +1,10 @@
 <h1><%= account_url %></h1>
+
+<ul>
+  <% @account.photos.each do |p| %>
+    <li>
+      <h3>photophore.com/i/<%= p.public_hash %></h3><br />
+      <%= image_tag p.image.url %>
+    </li>
+  <% end %>
+</ul>

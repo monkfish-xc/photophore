@@ -1,11 +1,17 @@
 class PhotosController < ApplicationController
   def new
-    @photo = Photo.new(photo_params)
+    @account = Account.new
+    @photo = @account.photos.build
   end
 
   def create
-    @photo = Photo.new(photo_params)
-    @photo.save!
+    @account = Account.create
+    @photo = @account.photos.build(photo_params)
+    if @photo.save
+      redirect_to @account
+    else
+      render 'new'
+    end
   end
 
   private

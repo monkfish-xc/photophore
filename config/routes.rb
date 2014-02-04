@@ -9,7 +9,12 @@
 Photophore::Application.routes.draw do
   # get "static_pages/home"
 
+  root :to => 'photos#new', :as => :new_photo
+
   get '/p/:public_hash', :to => 'accounts#show', :as => :account
-  get '/', :to => 'accounts#new', :as => :new_account
-  resources :accounts, only: :create
+  get '/i/:public_hash', :to => 'photos#show', :as => :photo
+  resources :photos, only: :create
+
+
+
 end

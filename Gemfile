@@ -49,6 +49,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'bootstrap-sass', '~> 3.1.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -59,4 +61,4 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+# gem 'debugger', group: [:development, :test],

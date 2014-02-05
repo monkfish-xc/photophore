@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Photophore, your stupid-simple anonymous image storage host</h1>
+    <p>
+      <span class="dev-regular-text">You have recently associated one of your albums with this email address. Save this email or copy the web address below to access your album.</span>
+    </p>
+    <p>
+      <h2>Your private album address</h2>
+      <span class="dev-emphasized-url"><h3>https://photophore.com/p/<%= @account.public_hash %></h3></span>
+      <span class="dev-regular-text">Remember, anyone with access to this address can edit your images! You can share any of your images by using the public addresses displayed in your album.</span>
+    </p>
+    <p>
+      <h3>Your delete token</h3>
+      <h4><blockquote><span class="dev-emphasized-text" style="font-family: sans-serif;"><%# @account.delete_token %>aight-den-yule</span></blockquote></h4>
+      <span class="dev-regular-text">Don't lose or share this token! We'll need it if and when you ever decide to delete your album forever. See our <%# FAQ %> for more information on managing your albums.</span>
+    </p>
+    <hr />
+    <p>
+      <span class="dev-small-text">Did we get the wrong address? Sorry about that. <%# Click here %> or respond to this email with UNSUBSCRIBE anywhere in the subject.</span>
+    </p>
+  </body>
+</html>

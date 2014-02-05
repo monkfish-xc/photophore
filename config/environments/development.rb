@@ -1,6 +1,19 @@
 Photophore::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # ActionMailer config for Gmail.
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'photophore.com',
+    user_name:            'gmail_user',
+    password:             'gmail_pw',
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
+
+  # Paperclip config.
    config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
@@ -9,10 +22,7 @@ Photophore::Application.configure do
       :secret_access_key => 'p9I9e6uku1kuPvZ1xHxFpjUBbBF8yUwi1uGXC6l3'
     }
   }
-
   Paperclip.options[:command_path] = '/usr/bin/'
-
-  config.assets.js_compressor = Uglifier.new(mangle: false)
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

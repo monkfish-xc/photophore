@@ -16,6 +16,7 @@ class PhotosController < ApplicationController
     end
     
     if @photo.save
+      # AccountMailer.new_album_email(@account).deliver
       redirect_to @account
     else
       render 'new'

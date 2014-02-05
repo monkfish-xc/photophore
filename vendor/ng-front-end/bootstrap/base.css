@@ -106,6 +106,7 @@ body {
 /********************/
 .link-wrapper {
 	margin-top: 3%;	
+	display: none;
 }
 
 .hidden-wrapper {

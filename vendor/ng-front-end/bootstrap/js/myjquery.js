@@ -1,15 +1,18 @@
 $(document).ready(function() {
 
-	$('#cloud').click(function() {
-		console.log("It worked!");
-		// $('.link-wrapper').hide();
-		
+	$('#cloud').click(function() {		
 		if($('.link-wrapper').is(':visible')) {
     	$('.link-wrapper').hide();
 		} else {
 			$('.link-wrapper').show();
 		}
 
+	})
+
+	$('#computer').click(function() {
+		if($('.link-wrapper').is(':visible')) {
+    	$('.link-wrapper').hide();
+		}
 	});
 
 });

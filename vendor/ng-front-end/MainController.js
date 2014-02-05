@@ -4,11 +4,12 @@ function MainController($scope, photoSearchService) {
 
 	$scope.photos = [];
 
+	$scope.userUrl = '';
+
 	$scope.picSize = '500';
 
 	$scope.setPicSize = function(size) {
 		$scope.picSize = size;
-		console.log($scope.picSize);
 	}
 
 	$scope.getPhotos = function() {

@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require app
+//= require photoPhoreApp
 //= require_tree ./angular

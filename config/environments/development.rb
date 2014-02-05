@@ -12,6 +12,8 @@ Photophore::Application.configure do
 
   Paperclip.options[:command_path] = '/usr/bin/'
 
+  config.assets.js_compressor = Uglifier.new(mangle: false)
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

@@ -10,6 +10,7 @@ Photophore::Application.configure do
     }
   }
 
+  config.assets.js_compressor = Uglifier.new(mangle: false)
 
   # Code is not reloaded between requests.
   config.cache_classes = true

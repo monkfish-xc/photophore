@@ -2,8 +2,9 @@
 
 <div class="form">
 <%= form_for @photo, :html => { :multipart => true } do |f| %>
-  <%= f.hidden_field :account_hash %>
-  <%= f.file_field :image %>
+  <%= f.hidden_field :account_hash, :value => 'iPOoWuliJ-cWTwi_7EbgBA' %>
+  <%#<%= f.file_field :image %>
+  <%= f.text_field :image %>
   <%= f.submit 'Upload image' %>
 <% end %>
 </div>

@@ -27,7 +27,6 @@ class Photo < ActiveRecord::Base
   validates_attachment_presence :image
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
-
   private
     def generate_unique_public_hash
       begin

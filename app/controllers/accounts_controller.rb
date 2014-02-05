@@ -2,7 +2,7 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.friendly.find(params[:public_hash])
-    render json: Account.friendly.find(params[:public_hash])
+    #render json: Account.friendly.find(params[:public_hash])
   end
 
   private

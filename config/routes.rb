@@ -22,11 +22,4 @@ Photophore::Application.routes.draw do
   scope :i do
     get '/:public_hash', :to => 'photos#show', :as => :photo
   end
-
-  scope :api do
-    get '/p/:public_hash(.:format)', :to => 'accounts#show'
-    get '/i/:public_hash(.:format)', :to => 'photos#show'
-    resources :accounts
-    resources :photos
-  end
 end

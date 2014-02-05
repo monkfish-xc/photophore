@@ -11,6 +11,7 @@
 #  image_content_type :string(255)
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  account_hash       :string(255)
 #
 
 class Photo < ActiveRecord::Base
@@ -25,7 +26,6 @@ class Photo < ActiveRecord::Base
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   validates_attachment_presence :image
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
-
 
   private
     def generate_unique_public_hash

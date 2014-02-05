@@ -1,4 +1,4 @@
-# == Route Map (Updated 2014-02-04 15:52)
+# == Route Map (Updated 2014-02-04 20:33)
 #
 #    Prefix Verb URI Pattern                   Controller#Action
 # new_photo GET  /                             photos#new
@@ -6,6 +6,7 @@
 #   account GET  /p/:public_hash(.:format)     accounts#show
 #     photo GET  /i/:public_hash(.:format)     photos#show
 #           GET  /api/p/:public_hash(.:format) accounts#show
+#           GET  /api/i/:public_hash(.:format) photos#show
 #
 
 Photophore::Application.routes.draw do
@@ -23,7 +24,9 @@ Photophore::Application.routes.draw do
   end
 
   scope :api do
-    get '/p/:public_hash', :to => 'accounts#show'
-    get '/i/:public_hash', :to => 'photos#show'
+    get '/p/:public_hash(.:format)', :to => 'accounts#show'
+    get '/i/:public_hash(.:format)', :to => 'photos#show'
+    resources :accounts
+    resources :photos
   end
 end

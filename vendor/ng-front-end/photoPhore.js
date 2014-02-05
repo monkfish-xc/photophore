@@ -1,1 +1,1 @@
-angular.module("photoPhore", []);
+window.App = angular.module('photoPhore', ['ngResource']);

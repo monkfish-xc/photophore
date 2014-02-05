@@ -1,5 +1,13 @@
 <h1><%= account_url %></h1>
 
+<div ng-controller="PhotosCtrl">
+  <ul>
+    <li ng-repeat="photo in photos">
+      <h3>{{photo.public_hash}}</h3>
+    </li>
+  </ul>
+</div>
+
 <ul>
   <% @account.photos.each do |p| %>
     <li>

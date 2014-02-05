@@ -2,11 +2,6 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.friendly.find(params[:public_hash])
-
-    respond_to do |format|
-      format.html
-      format.json { render :json => @account.photos.to_json }
-    end
   end
 
   private

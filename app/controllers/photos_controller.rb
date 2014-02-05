@@ -23,7 +23,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    render json: Photo.friendly.find(params[:public_hash])
+    @photo = Photo.friendly.find(params[:public_hash])
   end
 
   private

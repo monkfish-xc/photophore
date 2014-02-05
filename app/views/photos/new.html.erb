@@ -1,6 +1,42 @@
 <%# home page and upload page %>
 
-<h1>Photophore</h1>
+<div class="container control-container" ng-controller="MainController">
+
+	<div class="row">
+    <div class="col-xs-6 computer-wrapper" id="computer">
+    	<label for="local-upload"><img src="/assets/computer.png" ></label>
+    	<input name="computer" id="local-upload" type="file"  data-url="home/upload">
+    </div>
+    <div class="col-xs-6 cloud-wrapper" id="cloud">
+    	<label for="url-upload"><img src="/assets/cloud.png" ></label>
+    </div>
+  </div>
+
+  <div class="row link-wrapper">
+  	<div class="col-md-4 hidden-wrapper"></div>
+  	<div class="col-md-4 newbutton"> <!-- fix this -->
+	    <div class="input-group">
+			  <span class="input-group-addon">http://</span>
+			  <input type="text" ng-model="userUrl" class="form-control" placeholder="URL">
+			</div>
+    </div>
+    <div class="col-md-4 hidden-wrapper"></div>
+	</div>
+
+  <div class="row button-wrapper">
+		<div class="col-md-4 hidden-wrapper"></div>
+		<div class="col-md-4 button-wrapper">
+			<a href="file:///Users/anconia/Documents/voxa/photophore/vendor/ng-front-end/album.html" class="btn btn-primary btn-lg btn-block" id="button-submit">Submit</button></a>
+		</div>
+		<div class="col-md-4 hidden-wrapper"></div>
+  </div>
+  
+</div><!-- container control-container -->
+
+
+
+
+<!-- <h1>Photophore</h1>
 
 <div class="form">
 <%= form_for @photo, :html => { :multipart => true } do |f| %>
@@ -9,4 +45,4 @@
   <%= f.text_field :image %>
   <%= f.submit 'Upload image' %>
 <% end %>
-</div>
+</div> -->

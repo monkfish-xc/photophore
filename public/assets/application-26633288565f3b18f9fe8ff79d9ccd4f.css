@@ -1,0 +1,289 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+@import "bootstrap";
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+}
+
+body {
+	top: 0;
+	bottom: 0;
+}
+
+.thumbnail-button {
+	display: inline;
+	width: 100%;
+}
+
+.dropdown-link {
+	float: right;
+}
+
+/********************/
+/*       Icons      */
+/********************/
+
+.control-container {
+	/*height: 900px;*/
+	position: absolute;
+	top: calc(50% - 175px);
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+	@media (max-width: 750px) {
+	  .control-container {
+	  	top: calc(50% - 90px);
+	  }
+	}
+
+.computer-wrapper {
+	padding: 0;
+}
+
+#computer label {
+	float: right;
+	margin-right: 4%;
+}
+
+#computer img {
+	float: right;
+	width: 250px;
+}
+
+#computer input {
+	visibility: hidden;
+}
+
+.cloud-wrapper {
+	padding: 0;
+}
+
+#cloud img {
+	width: 250px;
+	margin-left: 4%;
+}
+
+#cloud input {
+	visibility: hidden;
+}
+
+	@media (max-width: 1170px) {
+	  #computer img {
+	    width: 230px;
+	  }
+	  #cloud img {
+	  	width: 230px;
+	  }
+	}	
+	@media (max-width: 970px) {
+	  #computer img {
+	    width: 200px;
+	  }
+	  #cloud img {
+	  	width: 200px;
+	  }
+	}
+	@media (max-width: 750px) {
+	  .computer-wrapper {
+	  	padding-right: 5%;
+	  }
+	  #computer img {
+	    width: 100px;
+	  }
+	  .cloud-wrapper {
+	  	padding-left: 5%;
+	  }
+	  #cloud img {
+	    width: 100px;
+	  }
+	}
+
+
+/********************/
+/*  Link container  */
+/********************/
+.link-wrapper {
+	margin-top: 3%;	
+	display: none;
+}
+
+.hidden-wrapper {
+	visibility: hidden;
+}
+
+	@media (max-width: 750px) {
+		.link-wrapper {
+			margin-top: 0;
+		}
+	  .input-group {
+	  	width: 230px;
+	  	margin: 0 auto;
+	  }
+	}
+
+/********************/
+/*  Submit button   */
+/********************/
+.button-wrapper {
+	margin-top: 3%;
+}
+
+#button-submit {
+	height: 45px;
+	width: 350px;
+	margin: 0 auto;
+}
+
+	@media (max-width: 970px) {
+	  .button-wrapper img {
+	    margin-top: 5%;
+	  }
+	  #button-submit {
+	  	width: 250px;
+	  }
+	}
+	@media (max-width: 750px) {
+		.button-wrapper {
+			margin-top: 5%;
+		}
+	  #button-submit {
+	  	width: 230px;
+	  }
+	}
+
+/********************/
+/*    Search bar    */
+/********************/
+.content-container {
+	/*margin-top: %;*/
+}
+	@media (max-width: 750px) {
+	  .content-container {
+	    margin-top: -5%;
+	  }
+	}
+
+.search-container {
+	padding-top: 4%;
+}
+
+.search-wrapper {
+ 	width: 400px;
+  margin: 0 auto;
+}
+
+.search-bar {
+	width: 75%;
+	float: left;
+	height: 35px;
+}
+
+.search-button {
+	width: 20%;
+	float: right;
+	height: 35px;
+}
+
+	@media (max-width: 1170px) {
+	  .search-wrapper {
+	    width: 400px;
+	  }
+	  .search-bar {
+	  	width: 75%;
+	  }
+	  .search-button {
+	  	width: 20%;
+	  }
+	}	
+	@media (max-width: 750px) {
+	  .search-wrapper {
+	    width: 250px;
+	  }
+	  .search-bar {
+	  	width: 70%;
+	  }
+	  .search-button {
+	  	width: 25%;
+	  }
+	}
+
+/********************/
+/*  Size selector   */
+/********************/
+
+.size-container {
+	padding-top: 1%;
+	text-align: center;
+}
+
+	@media (max-width: 750px) {
+	  .size-container {
+	    padding-top: 2%;
+	  }
+	}
+
+.size-wrapper {
+	text-align: left;
+	width: 250px;
+	margin: 0 auto;
+}
+
+/********************/
+/* Album image view */
+/********************/
+
+.album-wrapper {
+	padding-top: 7%;
+}
+	
+	@media (max-width: 750px) {
+	  .album-wrapper img {
+	    padding-top: 9%;
+	  }
+	}
+
+.image-wrapper {
+	margin: 0 0 30% 0;
+}
+
+	@media (max-width: 1170px) {
+	  .image-wrapper img {
+	    /*max-width: 100px;*/
+	  }
+	}
+
+	@media (max-width: 970px) {
+	  .image-wrapper img {
+	    width: 200px;
+	  }
+	}
+
+	@media (max-width: 768px) {
+	  .image-wrapper img {
+	    width: 200px;
+	  }
+	}
+
+	@media (max-width: 750px) {
+	  .image-wrapper img {
+	    width: 120px;
+	  }
+	}
